@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom, #050510, #101020);
+    color: #fff;
+}
+
+body, #main-content, #countdown-timer, #time-buttons, footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content, #countdown-timer, footer {
+    width: 100%;
+    z-index: 1;
+}
+
+#main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+#countdown-timer {
+    max-width: 500px;
+    min-height: 275px;
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+    background: #0a0f1e66;
+    border: 1px solid #ffffff1a;
+    box-shadow: 0 20px 50px #00000080;
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+}
+
+#title {
+    font-size: 2.3rem;
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#countdown-display {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 0.13rem;
+    margin: 1rem 0 2rem 0;
+    text-shadow: 0 0 20px #00f3ff66;
+}
+
+#time-buttons {
+    flex-flow: row wrap;
+    gap: 0.8rem;
+}
+
+button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    background: #ffffff0d;
+    border: 0.065rem solid #ffffff33;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+button:hover, button:focus {
+    outline: none;
+    color: #00f3ff;
+    background: #00f3ff1a;
+    border-color: #00f3ff;
+    box-shadow: 0 0 15px #00f3ff4d, 
+    inset 0 0 10px #00f3ff1a;
+    transform: translateY(-0.13rem);
+}
+
+footer {
+    padding: 1.2rem 0;
+    background: #05050a9d;
+    border-top: 0.065rem solid #ffffff6f;
+    backdrop-filter: blur(0.35rem);
+}
+
+footer a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    gap: 0.7rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: #00f3ff;
+    opacity: 0.8;
+}
+
+footer svg {
+    transition: transform 0.3s ease;
+}
+
+footer a:hover svg {
+    transform: scale(1.6);
+}
+
+/* Background video: Rocket Launch */
+#video-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+ #video-background video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
