@@ -11,14 +11,14 @@ body {
     color: #fff;
 }
 
-body, #main-content, #countdown-timer, #time-buttons, footer {
+body, #main-content, #countdown-timer, #time-buttons, footer, #modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#main-content, #countdown-timer, footer {
+#main-content, #countdown-timer, footer, #modal, .refresh-page {
     width: 100%;
     z-index: 1;
 }
@@ -41,7 +41,7 @@ body, #main-content, #countdown-timer, #time-buttons, footer {
 }
 
 #title {
-    font-size: 2.3rem;
+    font-size: 2rem;
     letter-spacing: 0.25rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -133,4 +133,28 @@ footer a:hover svg {
 
 #time-buttons button.disappear {
     display: none;
+}
+
+/* Modal */
+#modal {
+    position: fixed;
+    height: 100%;
+    background: #00000080;
+    backdrop-filter: blur(0.3rem);
+    transition: opacity 0.9s ease;
+}
+
+.refresh-page {
+    z-index: 5;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    max-width: 18.75rem;
+    background: #090c1440;
+    border: 0.065rem solid #ffffff6f;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.601);
+}
+
+.hidden {
+    display: none !important;
 }
