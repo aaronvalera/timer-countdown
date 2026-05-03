@@ -5,6 +5,8 @@ const btnsContainer = document.querySelector("#time-buttons");
 const timeBtns = document.querySelectorAll("button");
 const title = document.querySelector("#title");
 const countdownDisplay = document.querySelector("#countdown-display");
+const modal = document.querySelector("#modal");
+const resetBtn = document.querySelector("#reset-button");
 
 // Variables
 let index = 0;
@@ -21,10 +23,13 @@ const timer = () => {
         setTimeout(() => {
             elementsContainer.remove();
         }, 1000);
+        setTimeout(() => {
+            modal.classList.remove("hidden");
+        }, 19000);
     };
 };
 
-// Event listener
+// Event listeners
 timeBtns.forEach(button => {
     button.addEventListener("click", () => {
         index = parseInt(button.value);
@@ -32,4 +37,8 @@ timeBtns.forEach(button => {
         title.textContent = "Initiating launch in...";
         countDown = setInterval(timer, 1000);
     });
+});
+
+resetBtn.addEventListener("click", () => {
+    location.reload();
 });
