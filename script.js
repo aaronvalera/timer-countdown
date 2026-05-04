@@ -10,7 +10,7 @@ const resetBtn = document.querySelector("#reset-button");
 
 // Variables
 let index = 0;
-let countDown = undefined;
+let countDown = null;
 
 // Timer function
 const timer = () => {
